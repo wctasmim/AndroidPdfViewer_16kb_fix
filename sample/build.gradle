@@ -13,13 +13,14 @@ repositories {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.tools.compileSdk
+    namespace = 'com.github.shockwave.sample'
+    compileSdk = rootProject.tools.compileSdk
 
     defaultConfig {
-        minSdkVersion rootProject.tools.minSdk
-        targetSdkVersion rootProject.tools.targetSdk
-        versionCode 3
-        versionName "${rootProject.tools.versionName}"
+        minSdk = rootProject.tools.minSdk
+        targetSdk = rootProject.tools.targetSdk
+        versionCode = 3
+        versionName = "${rootProject.tools.versionName}"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -27,11 +28,16 @@ android {
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }
 
 dependencies {
     implementation project(':android-pdf-viewer')
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'org.androidannotations:androidannotations-api:4.6.0'
-    annotationProcessor "org.androidannotations:androidannotations:4.6.0"
+    implementation("androidx.activity:activity:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
 }
