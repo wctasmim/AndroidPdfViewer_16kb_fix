@@ -23,6 +23,7 @@ Licensed under Apache License 2.0.
 * targetSdk 35
 * minSdk 21
 * uses updated pdfium-android with 16kb page size alignment
+* implementation("io.github.oothp:android-pdf-viewer:3.2.0-beta05")
 
 
 
