@@ -1,3 +1,10 @@
+# 27 May 2025
+targetSdk 35, minSdk 21
+uses updated pdfium-android with 16kb page size alignment
+
+
+
+
 
 #### This is a fork of the [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer)
 switch back to the mainline repo when it gets migrated off JCenter
