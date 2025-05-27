@@ -1,27 +1,34 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion rootProject.tools.compileSdk
+    namespace = 'com.github.barteksc'
+    compileSdk = rootProject.tools.compileSdk
 
     defaultConfig {
-        minSdkVersion rootProject.tools.minSdk
-        targetSdkVersion rootProject.tools.targetSdk
-        versionCode 1
-        versionName "${rootProject.tools.versionName}"
+        minSdk = rootProject.tools.minSdk
+        targetSdk = rootProject.tools.targetSdk
+        versionCode = 1
+        versionName = rootProject.tools.versionName
     }
 
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
-    implementation 'androidx.core:core:1.7.0'
-    api 'com.github.mhiew:pdfium-android:1.9.2'
+    implementation("androidx.core:core:1.16.0")
+    api("io.github.oothp:pdfium-android:1.9.5-beta01")
 }
 
 // Maven Publishing
 ext {
-    PUBLISH_GROUP_ID = 'com.github.mhiew'
+    PUBLISH_GROUP_ID = 'io.github.oothp'
     PUBLISH_VERSION = "${rootProject.tools.versionName}"
     PUBLISH_ARTIFACT_ID = 'android-pdf-viewer'
 }
 
-apply from: "${rootProject.projectDir}/android-pdf-viewer/publish-mavencentral.gradle"

@@ -11,15 +11,15 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.github.barteksc.R;
 import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.R;
 import com.github.barteksc.pdfviewer.util.Util;
 
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {
 
-    private final static int HANDLE_LONG = 65;
-    private final static int HANDLE_SHORT = 40;
-    private final static int DEFAULT_TEXT_SIZE = 16;
+    private final static int HANDLE_LONG = 52;
+    private final static int HANDLE_SHORT = 38;
+    private final static int DEFAULT_TEXT_SIZE = 15;
 
     private float relativeHandlerMiddle = 0f;
 
@@ -78,11 +78,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
             }
         }
 
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            setBackgroundDrawable(background);
-        } else {
-            setBackground(background);
-        }
+        setBackground(background);
 
         LayoutParams lp = new LayoutParams(Util.getDP(context, width), Util.getDP(context, height));
         lp.setMargins(0, 0, 0, 0);
