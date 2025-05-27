@@ -32,3 +32,4 @@ ext {
     PUBLISH_ARTIFACT_ID = 'android-pdf-viewer'
 }
 
+//apply from: "${rootProject.projectDir}/android-pdf-viewer/publish-mavencentral.gradle"
