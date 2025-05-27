@@ -20,6 +20,25 @@ android {
     }
 }
 
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+// Create a dummy javadoc directory with a placeholder file
+file("$buildDir/docs/javadoc").mkdirs()
+file("$buildDir/docs/javadoc/index.html").text = "<html><body>Placeholder documentation</body></html>"
+
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+    from file("${project.buildDir}/docs/javadoc")
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
 dependencies {
     implementation("androidx.core:core:1.16.0")
     api("io.github.oothp:pdfium-android:1.9.5-beta01")
