@@ -17,12 +17,13 @@ It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for de
 Licensed under Apache License 2.0.
 
 #
+
 ## 3.2.0-beta05 (27 May 2025)
 
-targetSdk 35, minSdk 21
-uses updated pdfium-android with 16kb page size alignment
+* targetSdk 35
+* minSdk 21
+* uses updated pdfium-android with 16kb page size alignment
 
-#
 
 
 ## 3.2.0-beta.3
