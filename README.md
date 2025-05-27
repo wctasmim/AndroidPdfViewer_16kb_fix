@@ -1,7 +1,3 @@
-# 27 May 2025
-targetSdk 35, minSdk 21
-uses updated pdfium-android with 16kb page size alignment
-
 
 
 
@@ -19,6 +15,15 @@ so if you don't like 2.x version, try 1.x.__
 Library for displaying PDF documents on Android, with `animations`, `gestures`, `zoom` and `double tap` support.
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
 Licensed under Apache License 2.0.
+
+#
+## 3.2.0-beta05 (27 May 2025)
+
+targetSdk 35, minSdk 21
+uses updated pdfium-android with 16kb page size alignment
+
+#
+
 
 ## 3.2.0-beta.3
 * Change minimum SDK version to 19
