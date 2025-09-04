@@ -18,13 +18,13 @@ Licensed under Apache License 2.0.
 
 #
 
-## 3.2.0-beta05 (27 May 2025)
+## 2.3.5 (27 May 2025)
 
 * targetSdk 35
 * minSdk 21
 * uses updated pdfium-android with 16kb page size alignment
 
-* 
+ 
    implementation 'com.github.wctasmim:AndroidPdfViewer_16kb_fix:2.3.5'
 
 
