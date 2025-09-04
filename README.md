@@ -23,7 +23,9 @@ Licensed under Apache License 2.0.
 * targetSdk 35
 * minSdk 21
 * uses updated pdfium-android with 16kb page size alignment
-* implementation("io.github.oothp:android-pdf-viewer:3.2.0-beta05")
+
+* 
+   implementation 'com.github.wctasmim:AndroidPdfViewer_16kb_fix:2.3.5'
 
 
 
@@ -31,11 +33,11 @@ Licensed under Apache License 2.0.
 * Change minimum SDK version to 19
 * Drop MIPS support
 * Update to Androidx
-* Switch pdfium-android to a [fork](https://github.com/mhiew/PdfiumAndroid) so we can disable jetifier
+* Switch pdfium-android to a [fork](https://.com/mhiew/PdfiumAndroid) so we can disable jetifier
 
 ## 3.2.0-beta.2
 * Fix a potential NPE due to out of sync render thread management [Pull Request](https://github.com/barteksc/AndroidPdfViewer/pull/824)
-* Update the sample app configuration so that it can compile [Pull Request](https://github.com/mhiew/AndroidPdfViewer/pull/2)
+* Update the sample app configuration so that it can compile [Pull Request]( https://github.com/wctasmim/AndroidPdfViewer_16kb_fix)
 
 ## What's new in 3.2.0-beta.1?
 * Merge PR #714 with optimized page load
@@ -72,7 +74,17 @@ allprojects {
 }
 ```
 
-`implementation 'com.github.mhiew:android-pdf-viewer:3.2.0-beta.3'`
+how to Use : 
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+ 
+   implementation 'com.github.wctasmim:AndroidPdfViewer_16kb_fix:2.3.5'
 
 ## ProGuard
 If you are using ProGuard, add following rule to proguard config file:
@@ -180,7 +192,7 @@ is used and clicking on link that references page in same document causes jump t
 and clicking on link that targets some URI causes opening it in default application.
 
 You can also create custom link handlers, just implement **LinkHandler** interface and set it using
-`Configurator#linkHandler(LinkHandler)` method. Take a look at [DefaultLinkHandler](https://github.com/barteksc/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/barteksc/pdfviewer/link/DefaultLinkHandler.java)
+`Configurator#linkHandler(LinkHandler)` method. Take a look at [DefaultLinkHandler](https://github.com/wctasmim/AndroidPdfViewer_16kb_fix/tree/master/android-pdf-viewer/src/main/java/com/github/barteksc/pdfviewer/link/DefaultLinkHandler.java)
 source to implement custom behavior.
 
 ## Pages fit policy
