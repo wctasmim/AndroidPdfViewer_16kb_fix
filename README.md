@@ -23,9 +23,14 @@ Licensed under Apache License 2.0.
 * targetSdk 35
 * minSdk 21
 * uses updated pdfium-android with 16kb page size alignment
+```
+Implement
 
- 
    implementation 'com.github.wctasmim:AndroidPdfViewer_16kb_fix:2.3.5'
+
+}
+```
+ 
 
 
 
